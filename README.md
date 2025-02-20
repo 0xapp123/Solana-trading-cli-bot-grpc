@@ -12,7 +12,7 @@
 
 **Solana Trading CLI** is a free, highly efficient library designed to facilitate rapid development of custom trading strategies across multiple Solana DEXs. It emphasizes low-latency performance, flexibility, and real-time data processing, utilizing cutting-edge infrastructure. These features ensure the following benefits:
 
-* **Speed:** Leverages low-latency infrastructures like Jito and BloXroute to minimize trade execution times, giving your strategies a competitive edge.
+* **Speed:** Leverages low-latency infrastructures like Jito, BloXroute, and Nozomi to minimize trade execution times, giving your strategies a competitive edge.
 * **Versatility:** Supports multiple DEXs like Raydium, Orca, Meteora, and Pump.fun, allowing for diverse trading opportunities.
 * **Real-time Insights:** Fetches current state of an account using RPC, streams the latest transactions of accounts using geyser gRPC
 
@@ -44,6 +44,7 @@ Accelerate transaction finality using Jito and bloXroute for lightning-fast trad
 |----------|---------------|
 | Jito      | Fast trascation and optimizes transaction ordering and execution specifically |
 | Bloxroute | Fast trascation and accelerates transaction propagation |
+| Nozomi    | Optimzed tx spamming and submission to current blockleader |
 
 ### Real-Time Market Data
 Fetch critical metrics for any liquidity pool in real-time with RPC calls:
