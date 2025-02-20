@@ -40,6 +40,11 @@ import { MinimalMarketLayoutV3, getMinimalMarketV3 } from "../market";
 import { createPoolKeys, getTokenAccounts } from "../liquidity";
 import { populateJitoLeaderArray } from "../streaming/raydium";
 import { retrieveEnvVariable } from "../utils";
+import {sendNozomiTx} from "../../../../transactions/nozomi/tx-submission";
+import {BoughtCache} from "../token-cache";
+import { Mutex } from 'async-mutex';
+let mutexForSnipe = new Mutex();
+let boughtCache = new BoughtCache();
 
 let wallet: Keypair;
 let quoteToken: Token;
@@ -167,14 +172,27 @@ export async function buy(
   tokenType: string
 ): Promise<void> {
   try {
+    if(mutexForSnipe.isLocked()) {
+      logger.debug( "Skipping buy because one token at a time and token is already being processed");
+     //writeLineToBundleBuyBotFile(`Skipping buy because one token at a time and token is already being processed, token: ${tokenAddress}, percentage: ${percentage}`);
+      return;
+    }
     let ata:any = null;
-    if (tokenType === "pump")
+    let target_token = "";
+    if (tokenType === "pump"){
       ata = getAssociatedTokenAddressSync(
         poolState.quoteMint,
         wallet.publicKey
       );
-    else
+      target_token = poolState.quoteMint.toBase58();
+    }
+    else{
       ata = getAssociatedTokenAddressSync(poolState.baseMint, wallet.publicKey);
+      target_token = poolState.baseMint.toBase58();
+    }
+    const exists = await boughtCache.get(target_token);
+    if(exists) {  logger.debug("Skipping buy because token is already bought");return;}
+    await mutexForSnipe.acquire(); // one token at a time
     const poolKeys = createPoolKeys(newTokenAccount, poolState, marketDetails!);
     const { innerTransaction } = Liquidity.makeSwapFixedInInstruction(
       {
@@ -190,26 +208,28 @@ export async function buy(
       poolKeys.version
     );
 
+    const ix_list = [
+      ...[
+        ComputeBudgetProgram.setComputeUnitLimit({
+          units: 80000,
+        }),
+        ComputeBudgetProgram.setComputeUnitPrice({
+          microLamports: 0.004 * LAMPORTS_PER_SOL,
+        }),
+      ],
+      createAssociatedTokenAccountIdempotentInstruction(
+        wallet.publicKey,
+        ata,
+        wallet.publicKey,
+        tokenType == "pump" ? poolState.quoteMint : poolState.baseMint
+      ),
+      ...innerTransaction.instructions,
+    ];
+
     const messageV0 = new TransactionMessage({
       payerKey: wallet.publicKey,
       recentBlockhash: latestBlockhash,
-      instructions: [
-        ...[
-          ComputeBudgetProgram.setComputeUnitLimit({
-            units: 80000,
-          }),
-          ComputeBudgetProgram.setComputeUnitPrice({
-            microLamports: 0.04 * LAMPORTS_PER_SOL,
-          }),
-        ],
-        createAssociatedTokenAccountIdempotentInstruction(
-          wallet.publicKey,
-          ata,
-          wallet.publicKey,
-          tokenType == "pump" ? poolState.quoteMint : poolState.baseMint
-        ),
-        ...innerTransaction.instructions,
-      ],
+      instructions: ix_list,
     }).compileToV0Message();
 
     let commitment: Commitment = retrieveEnvVariable(
@@ -220,6 +240,9 @@ export async function buy(
     const transaction = new VersionedTransaction(messageV0);
 
     transaction.sign([wallet, ...innerTransaction.signers]);
+
+    // uncomment if you want to land ur buy though nozomi
+    //sendNozomiTx(ix_list, wallet, latestBlockhash, "RAY", "Buy");
 
     //await sleep(30000);
 
@@ -232,20 +255,24 @@ export async function buy(
     // if(tokenType==="pump") sendBundle(latestBlockhash, messageV0, poolState.quoteMint);
     // else sendBundle(latestBlockhash, messageV0, poolState.baseMint);
 
-    if (tokenType === "pump")
+    if (tokenType === "pump"){
       simple_executeAndConfirm(
         transaction,
         wallet,
         latestBlockhash,
         poolState.quoteMint.toBase58()
       );
-    else
+    }
+    else{
       simple_executeAndConfirm(
         transaction,
         wallet,
         latestBlockhash,
         poolState.baseMint.toBase58()
       );
+    }
+    boughtCache.save(target_token, true);
+    mutexForSnipe.release();
   } catch (error) {
     logger.error(error);
   }

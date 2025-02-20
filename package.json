@@ -53,7 +53,8 @@
     "random-js": "^2.1.0",
     "rpc-websockets": "7.10.0",
     "@triton-one/yellowstone-grpc": "^0.4.0",
-    "jito-ts": "^4.0.0"
+    "jito-ts": "^4.0.0",
+    "async-mutex": "^0.5.0"
   },
   "devDependencies": {
     "typescript": "^5.5.4"
