@@ -267,7 +267,7 @@ export class PumpFunSDK {
     );
 
     return this.program.methods
-      .create(name, symbol, uri)
+      .create(name, symbol, uri, creator)
       .accounts({
         mint: mint.publicKey,
         associatedBondingCurve: associatedBondingCurve,
