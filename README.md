@@ -15,7 +15,7 @@
 
 * **Versatility:** Works with DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
 
-* **Real-Time Data:** Fetches account info via RPC and streams transactions using geyser gRPC.
+* **Real-Time Data:** Fetches account state info via RPC and streams transactions and/or accounts state using geyser gRPC.
 
 It’s designed to be easy to customize:
 - Add your own strategies and features.
