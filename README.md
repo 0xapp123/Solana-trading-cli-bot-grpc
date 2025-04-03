@@ -10,20 +10,22 @@
 
 ## About
 
-**Solana Trading CLI** is a free, highly efficient library designed to facilitate rapid development of custom trading strategies across multiple Solana DEXs. It emphasizes low-latency performance, flexibility, and real-time data processing, utilizing cutting-edge infrastructure. These features ensure the following benefits:
+**Solana Trading CLI** is a free, fast, and flexible tool for creating custom trading strategies on Solana DEXs. It’s built for speed, variety, and real-time data, using cutting-edge tech. Here’s what you get:
+* **Speed:** Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades fast, giving you an edge.
 
-* **Speed:** Leverages low-latency infrastructures like Jito, BloXroute, and Nozomi to minimize trade execution times, giving your strategies a competitive edge.
-* **Versatility:** Supports multiple DEXs like Raydium, Orca, Meteora, and Pump.fun, allowing for diverse trading opportunities.
-* **Real-time Insights:** Fetches current state of an account using RPC, streams the latest transactions of accounts using geyser gRPC
+* **Versatility:** Works with DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
 
-The library is built with modularity and extensibility in mind, employing software design patterns that promote:
+* **Real-Time Data:** Fetches account info via RPC and streams transactions using geyser gRPC.
 
-* **Customizability:** Easily integrate your own trading strategies and extend the bot's functionality.
-* **Testability:** Well-separated components facilitate comprehensive testing of individual modules.
-* **Maintainability:** Clear structure and separation of concerns simplify ongoing development and updates.
+It’s designed to be easy to customize:
+- Add your own strategies and features.
 
-Designed for seamless integration into existing trading systems, the Open-Source Low-Latency Trading Bot provides a robust foundation for both novice algo-traders and experienced quantitative analysts. Its open-source nature encourages community contributions and continuous improvement, ensuring the bot evolves alongside the fast-paced world of decentralized finance.
-  
+- Test individual modules with its clear setup.
+
+- Keep it updated with a simple structure.
+
+This open-source bot fits into your trading system, perfect for newbies.
+
 ## Key Features
 
 ### Token Creation and Multi-DEX Support
