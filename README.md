@@ -1,20 +1,24 @@
 ![Solana Trading CLI Logo](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
 
-**Solana Trading CLI** is a free, fast, and flexible tool for creating custom trading strategies on Solana DEXs. It's built for speed, variety, and real-time data, using cutting-edge tech. Here's what you get:
-* **Speed:** Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades fast, giving you an edge.
+# Solana Trading CLI
+A simple, fast, flexible Library for building custom trading strategies on Solana. It's built for speed, variety, and real-time data, using Cutting-edge Tech. Here's what you get:
 
-* **Versatility:** Works with DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
+- Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades, read/write from a local postgreSQL database.
 
-* **Real-Time Data:** Fetches account state info via RPC and streams transactions and/or accounts state using geyser gRPC.
+- Supports DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
 
-It's designed to be easy to customize:
+- Streams transactions and/or accounts state from a third-party's geyser gRPC node.
+
+- Fetches account state info via optimized RPC methods.
+
+It's designed to:
 - Add your own strategies and features.
 
 - Test individual modules with its clear setup.
 
 - Keep it updated with a simple structure.
 
-This open-source bot fits into your trading system, perfect for newbies.
+This bot fits into your trading system, perfect for newbies.
 
 # Core Components
 
