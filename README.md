@@ -63,7 +63,7 @@ The database stores:
 - Market analysis and transaction data
 
 
-## Open-Source gRPC Bots
+## Open-Source Geyser gRPC Bots
 Leverage our cutting-edge, open-source gRPC trading bots:
 
 | Bot Name | Features | Source |
