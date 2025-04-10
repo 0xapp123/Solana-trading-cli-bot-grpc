@@ -1,3 +1,5 @@
+![Solana Trading CLI Logo](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
+
 **Solana Trading CLI** is a free, fast, and flexible tool for creating custom trading strategies on Solana DEXs. It’s built for speed, variety, and real-time data, using cutting-edge tech. Here’s what you get:
 * **Speed:** Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades fast, giving you an edge.
 
