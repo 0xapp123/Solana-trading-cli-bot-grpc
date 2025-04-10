@@ -50,8 +50,8 @@ Utilize our local limit order and TP/SL module with zero dependencies.
 ### All commands 
 [Here](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/src/README.md)
 
-### Open-Source Bots
-Leverage our cutting-edge, open-source trading bots:
+### Open-Source gRPC Bots
+Leverage our cutting-edge, open-source gRPC trading bots:
 
 | Bot Name | Features | Source |
 |----------|----------|--------|
