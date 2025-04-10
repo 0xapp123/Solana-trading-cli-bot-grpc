@@ -11,13 +11,6 @@ A simple, fast, flexible Library for building custom trading strategies on Solan
 
 - Fetches account state info via optimized RPC methods.
 
-It's designed to:
-- Add your own strategies and features.
-
-- Test individual modules with its clear setup.
-
-- Keep it updated with a simple structure.
-
 This bot fits into your trading system, perfect for newbies.
 
 # Core Components
