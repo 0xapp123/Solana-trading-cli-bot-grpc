@@ -42,7 +42,7 @@ export async function swap(
     inToken: PublicKey,
     outToken: PublicKey,
     swapAmount: any;
-  const dlmmPool = await fetchDLMMPool(tokenAddress); // fetch the DLMM pool object for swapping
+  const dlmmPool:any = await fetchDLMMPool(tokenAddress); // fetch the DLMM pool object for swapping
   decimalY = dlmmPool.tokenY.decimal;
   decimalX = dlmmPool.tokenX.decimal;
   if (side === "buy") {

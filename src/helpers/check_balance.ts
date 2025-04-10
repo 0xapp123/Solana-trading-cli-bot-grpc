@@ -1,33 +1,10 @@
 import { Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
-import {
-  getDomainKeySync,
-  NameRegistryState,
-} from "@bonfida/spl-name-service";
+
 import { main_endpoint, wallet } from "./config";
 const connectionMain = new Connection(main_endpoint);
 import { getAssociatedTokenAddressSync } from "@solana/spl-token";
 
-/**
- * Retrieves the public key associated with a given .sol domain.
- * @param {string} domain - The .sol domain to retrieve the public key for.
- * @returns {Promise<string>} The public key associated with the domain.
- */
-export async function getPublicKeyFromSOLDomain(domain:string) {
-  // check if the domain is a .sol domain
-  // the last four characters should be ".sol"
-  if (!domain.endsWith(".sol")) {
-    console.error(`❌ The provided domain is not a .sol domain: ${domain}`);
-    return;
-  }
-  const publicKey = await getDomainKeySync(domain);
-  const owner = (
-    await NameRegistryState.retrieve(connectionMain, publicKey.pubkey)
-  ).registry.owner.toBase58();
-  console.log(
-    `🔍 Finished! The public key for the domain ${domain} is ${owner}!`
-  );
-  return owner;
-}
+
 /**
  * Checks the balance of a wallet address.
  * @param {string} address - The wallet address to check.
@@ -73,14 +50,3 @@ export async function getSPLTokenBalance(connection:Connection, tokenAccount:Pub
  * @param {object} connection - The connection object for interacting with the Solana network.
  * @returns {Promise<void>} - A promise that resolves once the balance is checked.
  */
-export async function checkBalanceByDomain(domain:string, connection:Connection) {
-  // get the public key from the domain
-
-  const owner:any = await getPublicKeyFromSOLDomain(domain);
-
-  const balanceInLamports = await connection.getBalance(new PublicKey(owner));
-  const balanceInSOL = balanceInLamports / LAMPORTS_PER_SOL;
-  console.log(
-    `💰 Finished! The balance for the wallet at domain ${domain} is ${balanceInSOL}!`
-  );
-}

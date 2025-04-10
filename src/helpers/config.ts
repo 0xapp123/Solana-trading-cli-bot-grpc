@@ -16,6 +16,11 @@ import path from "path";
 // default path: /Users/{your_user_name}/Desktop/solana-trading-cli/src/helpers/.env
 // please specify your own .env path
 const envPath = path.join(__dirname, ".env");
+
+// Check if .env file exists before trying to load it
+if (!fs.existsSync(envPath)) {
+    throw new Error(`Please specify your private key and rpc url in src/helpers/.env.example and rename it to .env.`);
+}
 dotenv.config({
   path: envPath, // fill in your .env path
 });
