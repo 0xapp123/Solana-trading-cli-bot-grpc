@@ -1,13 +1,13 @@
 ![Solana Trading CLI Logo](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
 
-**Solana Trading CLI** is a free, fast, and flexible tool for creating custom trading strategies on Solana DEXs. It’s built for speed, variety, and real-time data, using cutting-edge tech. Here’s what you get:
+**Solana Trading CLI** is a free, fast, and flexible tool for creating custom trading strategies on Solana DEXs. It's built for speed, variety, and real-time data, using cutting-edge tech. Here's what you get:
 * **Speed:** Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades fast, giving you an edge.
 
 * **Versatility:** Works with DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
 
 * **Real-Time Data:** Fetches account state info via RPC and streams transactions and/or accounts state using geyser gRPC.
 
-It’s designed to be easy to customize:
+It's designed to be easy to customize:
 - Add your own strategies and features.
 
 - Test individual modules with its clear setup.
@@ -98,6 +98,27 @@ Follow these steps to get your development environment set up:
 - [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
 - [Node.js](https://nodejs.org/) (version specified in `.nvmrc`)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Local Database Setup
+
+The project includes a PostgreSQL database for storing Pump.fun trading data and market analysis. For detailed setup instructions, see [Database Documentation](docker_postgres_db/README.md).
+
+Quick setup:
+```bash
+# Navigate to database directory
+cd docker_postgres_db
+
+# Create environment file
+cp .env.example .env
+
+# Start database
+docker-compose up -d
+```
+
+The database stores:
+- Trading history and limit orders
+- Token tracking and pool migrations
+- Market analysis and transaction data
 
 ### Troubleshooting
 
