@@ -38,6 +38,28 @@ Accelerate transaction finality using Jito and bloXroute for lightning-fast trad
 | Bloxroute | Fast trascation and accelerates transaction propagation |
 | Nozomi    | Optimzed tx spamming and submission to current blockleader |
 
+### Local Database Setup
+
+The project includes a PostgreSQL database for storing Pump.fun trading data and market analysis. For detailed setup instructions, see [Database Documentation](docker_postgres_db/README.md).
+
+Quick setup:
+```bash
+# Navigate to database directory
+cd docker_postgres_db
+
+# Create environment file
+cp .env.example .env
+
+# Start database
+docker-compose up -d
+```
+
+The database stores:
+- Trading history and limit orders
+- Token tracking and pool migrations
+- Market analysis and transaction data
+
+
 ### Real-Time Market Data
 Fetch critical metrics for any liquidity pool in real-time with RPC calls:
 - Price
@@ -98,27 +120,6 @@ Follow these steps to get your development environment set up:
 - [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
 - [Node.js](https://nodejs.org/) (version specified in `.nvmrc`)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
-
-### Local Database Setup
-
-The project includes a PostgreSQL database for storing Pump.fun trading data and market analysis. For detailed setup instructions, see [Database Documentation](docker_postgres_db/README.md).
-
-Quick setup:
-```bash
-# Navigate to database directory
-cd docker_postgres_db
-
-# Create environment file
-cp .env.example .env
-
-# Start database
-docker-compose up -d
-```
-
-The database stores:
-- Trading history and limit orders
-- Token tracking and pool migrations
-- Market analysis and transaction data
 
 ### Troubleshooting
 
