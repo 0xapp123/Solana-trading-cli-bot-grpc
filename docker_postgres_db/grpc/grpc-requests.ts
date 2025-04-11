@@ -206,4 +206,4 @@ export async function createSubscribeWalletsPumpSwapTrades(listOfWallets: string
       entry: {},
     };
     return request;
-  }
+}
