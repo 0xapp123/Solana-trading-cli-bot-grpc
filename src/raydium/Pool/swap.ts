@@ -158,14 +158,22 @@ async function swapOnlyAmm(input: any) {
   return { txid: null };
 }
 async function swapOnlyAmmUsingBloXRoute(input: any) {
+  let raydium: any = null;
+  if (sdkCache.sdk) {
+    raydium = sdkCache.sdk;
+  } else {
+    raydium = await initSdk();
+    sdkCache.sdk = raydium;
+  }
   const poolKeys: any = await formatAmmKeysById_swap(
     new PublicKey(input.targetPool)
   );
   assert(poolKeys, "cannot find the target pool");
-  const poolInfo = await Liquidity.fetchInfo({
-    connection: connection,
-    poolKeys: poolKeys,
-  });
+  // const poolInfo = await Liquidity.fetchInfo({
+  //   connection: connection,
+  //   poolKeys: poolKeys,
+  // });
+  const poolInfo = await raydium.liquidity.getRpcPoolInfo(input.targetPool);
   // -------- step 1: coumpute amount out --------
   const { amountOut, minAmountOut } = Liquidity.computeAmountOut({
     poolKeys: poolKeys,
