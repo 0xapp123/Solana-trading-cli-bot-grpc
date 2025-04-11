@@ -3,7 +3,9 @@
 # Solana Trading CLI
 A simple, fast, flexible Library for building custom trading strategies on Solana. It's built for speed, variety, and real-time data, using Cutting-edge Tech. Here's what you get:
 
-- Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades, read/write from a local postgreSQL database.
+- Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades,
+
+- Read/write Pumpfun data in a local postgreSQL db.
 
 - Supports DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
 
