@@ -1,9 +1,11 @@
 ![Solana Trading CLI Logo](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
 
 # Solana Trading CLI
-A simple, fast, flexible Library for building custom trading strategies on Solana. It's built for speed, variety, and real-time data, using Cutting-edge Tech. Here's what you get:
+A simple, fast, powerful Library for building custom trading strategies on Solana. It's built for speed, variety, and real-time data, using Cutting-edge Tech. Here's what you get:
 
-- Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades, read/write from a local postgreSQL database.
+- Uses low-latency systems like Jito, BloXroute, and Nozomi to execute trades,
+
+- Read/write Pumpfun data in a local postgreSQL db.
 
 - Supports DEXs like Raydium, Orca, Meteora, and Pump.fun for more trading options.
 
@@ -200,7 +202,7 @@ This software is provided "as is", without warranty of any kind, express or impl
 
 By using this software, you acknowledge that you have read, understood, and agree to this disclaimer.
 
-### Discord channel: https://discord.gg/hFhQeBCqWX
+### Discord channel: https://discord.gg/pVXx52jk
 
 ### If you think this will steal your keys, i have no time to convince you to use it.
 
