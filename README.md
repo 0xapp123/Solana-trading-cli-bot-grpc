@@ -29,7 +29,7 @@ Create your own Solana SPL tokens on mainnet via Pump.fun and swap tokens across
 | Pump.fun  | Integrated support |
 
 
-## Local Database Setup
+## Local Database Setup (In Development)
 
 The project includes a PostgreSQL database for storing Pump.fun trading data and market analysis. For detailed setup instructions, see [Database Documentation](docker_postgres_db/README.md).
 
