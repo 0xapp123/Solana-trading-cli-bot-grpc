@@ -88,7 +88,7 @@ Follow these steps to get your development environment set up:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/outsmartchad/solana-trading-cli.git
+   git clone https://github.com/0xapp123/Solana-trading-cli.git
    ```
 
 2. **Navigate to the project directory**
@@ -120,7 +120,7 @@ Follow these steps to get your development environment set up:
 
 ### Troubleshooting
 
-If you encounter any issues during installation, please check our [FAQ](link-to-faq) or [open an issue](https://github.com/outsmartchad/solana-trading-cli/issues).
+If you encounter any issues during installation, please check our [FAQ](link-to-faq) or [open an issue](https://github.com/0xapp123/Solana-trading-cli/issues).
 
 ## 🚨 Set Up 
 
