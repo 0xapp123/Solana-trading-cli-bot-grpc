@@ -22,10 +22,10 @@ Create your own Solana SPL tokens on mainnet via Pump.fun and swap tokens across
 
 | Exchange | Documentation |
 |----------|---------------|
-| Jupiter  | [CLI & trading functions guide](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/src/jupiter/README.md) |
-| Raydium   | [CLI & trading functions guide](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/src/raydium/README.md) |
-| Orca      | [CLI & trading functions guide](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/src/orca/README.md) |
-| Meteora   | [CLI & trading functions guide](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/src/meteora/README.md) |
+| Jupiter  | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/jupiter/README.md) |
+| Raydium   | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/raydium/README.md) |
+| Orca      | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/orca/README.md) |
+| Meteora   | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/meteora/README.md) |
 | Pump.fun  | Integrated support |
 
 
