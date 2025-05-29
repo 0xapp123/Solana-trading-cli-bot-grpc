@@ -67,9 +67,9 @@ Leverage our cutting-edge, open-source gRPC trading bots:
 
 | Bot Name | Features | Source |
 |----------|----------|--------|
-| gRPC Pump.fun Sniper Bot | Ultra-low latency (0.4-2 seconds) | [View source](https://github.com/outsmartchad/solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-pf-sniper) |
-| gRPC Copy Bot | Replicate successful trading strategies | [View source](https://github.com/outsmartchad/solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-copy-bot) |
-| gRPC Raydium Sniper Bot | Optimized for Raydium DEX | [View source](https://github.com/outsmartchad/solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-raydium-sniper) |
+| gRPC Pump.fun Sniper Bot | Ultra-low latency (0.4-2 seconds) | [View source](https://github.com/0xapp123/Solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-pf-sniper) |
+| gRPC Copy Bot | Replicate successful trading strategies | [View source](https://github.com/0xapp123/Solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-copy-bot) |
+| gRPC Raydium Sniper Bot | Optimized for Raydium DEX | [View source](https://github.com/0xapp123/Solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-raydium-sniper) |
 
 
 ## Real-Time Market Data
