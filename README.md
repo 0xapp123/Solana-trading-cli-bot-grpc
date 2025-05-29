@@ -1,4 +1,4 @@
-![Solana Trading CLI Logo](https://github.com/outsmartchad/solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
+![Solana Trading CLI Logo](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
 
 # Solana Trading CLI
 A simple, fast, powerful Library for building custom trading strategies on Solana. It's built for speed, variety, and real-time data, using Cutting-edge Tech. Here's what you get:
