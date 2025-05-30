@@ -1,4 +1,4 @@
-![Solana Trading CLI Logo](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/assets/sol-repo.jpg)
+![Solana Trading CLI Logo](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/blob/typescript-main/assets/sol-repo.jpg)
 
 ## If you have some questions, ask [@Tr1030109](https://t.me/Tr1030109) in Telegram and 0xapp123 in Discord
 
@@ -24,10 +24,10 @@ Create your own Solana SPL tokens on mainnet via Pump.fun and swap tokens across
 
 | Exchange | Documentation |
 |----------|---------------|
-| Jupiter  | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/jupiter/README.md) |
-| Raydium   | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/raydium/README.md) |
-| Orca      | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/orca/README.md) |
-| Meteora   | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli/blob/typescript-main/src/meteora/README.md) |
+| Jupiter  | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/blob/typescript-main/src/jupiter/README.md) |
+| Raydium   | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/blob/typescript-main/src/raydium/README.md) |
+| Orca      | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/blob/typescript-main/src/orca/README.md) |
+| Meteora   | [CLI & trading functions guide](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/blob/typescript-main/src/meteora/README.md) |
 | Pump.fun  | Integrated support |
 
 
@@ -69,9 +69,9 @@ Leverage our cutting-edge, open-source gRPC trading bots:
 
 | Bot Name | Features | Source |
 |----------|----------|--------|
-| gRPC Pump.fun Sniper Bot | Ultra-low latency (0.4-2 seconds) | [View source](https://github.com/0xapp123/Solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-pf-sniper) |
-| gRPC Copy Bot | Replicate successful trading strategies | [View source](https://github.com/0xapp123/Solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-copy-bot) |
-| gRPC Raydium Sniper Bot | Optimized for Raydium DEX | [View source](https://github.com/0xapp123/Solana-trading-cli/tree/typescript-main/src/grpc_streaming_dev/grpc-raydium-sniper) |
+| gRPC Pump.fun Sniper Bot | Ultra-low latency (0.4-2 seconds) | [View source](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/tree/typescript-main/src/grpc_streaming_dev/grpc-pf-sniper) |
+| gRPC Copy Bot | Replicate successful trading strategies | [View source](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/tree/typescript-main/src/grpc_streaming_dev/grpc-copy-bot) |
+| gRPC Raydium Sniper Bot | Optimized for Raydium DEX | [View source](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/tree/typescript-main/src/grpc_streaming_dev/grpc-raydium-sniper) |
 
 
 ## Real-Time Market Data
@@ -90,12 +90,12 @@ Follow these steps to get your development environment set up:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/0xapp123/Solana-trading-cli.git
+   git clone https://github.com/0xapp123/Solana-trading-cli-bot-grpc.git
    ```
 
 2. **Navigate to the project directory**
    ```bash
-   cd solana-trading-cli
+   cd Solana-trading-cli-bot-grpc
    ```
 
 3. **Install the correct Node.js version**
@@ -122,7 +122,7 @@ Follow these steps to get your development environment set up:
 
 ### Troubleshooting
 
-If you encounter any issues during installation, please check our [FAQ](link-to-faq) or [open an issue](https://github.com/0xapp123/Solana-trading-cli/issues).
+If you encounter any issues during installation, please check our [FAQ](link-to-faq) or [open an issue](https://github.com/0xapp123/Solana-trading-cli-bot-grpc/issues).
 
 ## 🚨 Set Up 
 

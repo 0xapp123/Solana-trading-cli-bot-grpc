@@ -1,5 +1,5 @@
 {
-  "name": "solana-trading-cli",
+  "name": "Solana-trading-cli-bot-grpc",
   "version": "1.0.0",
   "description": "Best development tool for Algo Trading on Solana",
   "main": "help.js",
@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "vincentso",
-  "url": "https://github.com/outsmartchad/solana-trading-cli/issues",
-  "homepage": "https://github.com/outsmartchad/solana-trading-cli",
+  "author": "0xapp123",
+  "url": "https://github.com/0xapp123/Solana-trading-cli-bot-grpc/issues",
+  "homepage": "https://github.com/0xapp123/Solana-trading-cli-bot-grpc",
   "license": "ISC",
   "dependencies": {
     "@bloxroute/solana-trader-client-ts": "^2.1.6",
